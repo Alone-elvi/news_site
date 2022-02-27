@@ -20,6 +20,8 @@ return new class extends Migration
             $table->text('body');
             $table->string('img');
             $table->timestamps();
+            // created_at
+            // updated_at
         });
     }
 

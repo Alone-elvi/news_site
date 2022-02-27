@@ -11,5 +11,5 @@ class State extends Model
 
     protected $fillable = ['likes', 'views', 'article_id'];
 
-    public $timestamps = false;
+//    public $timestamps = false;
 }

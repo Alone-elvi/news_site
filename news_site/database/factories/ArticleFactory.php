@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Str;
 use App\Models\Article;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Psy\Util\Str;
+//use Psy\Util\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Article>

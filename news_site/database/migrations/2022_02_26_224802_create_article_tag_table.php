@@ -14,12 +14,18 @@ return new class extends Migration
     public function up()
     {
         Schema::create('article_tag', function (Blueprint $table) {
-            $table->id();
+//            $table->id();
 //            $table->timestamps();
-            $table->unsignedBigInteger('article_id');
-            $table->foreign('article_id')->references('id')->on('articles');
-            $table->unsignedBigInteger('tag_id');
-            $table->foreign('tag_id')->references('id')->on('tags');
+
+
+            $table->foreignId('article_id')->constrained()->onDelete('cascade');
+            $table->foreignId('tag_id')->constrained()->onDelete('cascade');
+
+//            $table->unsignedBigInteger('article_id');
+//            $table->foreign('article_id')->references('id')->on('articles');
+//            $table->unsignedBigInteger('tag_id');
+//            $table->foreign('tag_id')->references('id')->on('tags');
+
         });
     }
 
